@@ -3,6 +3,8 @@ function main(){
     addValue(values)
     var res = totalValue(values)
     console.log(`A soma de todos os valores é ${res}`)
+    var md = mdValues(values, res)
+    console.log(`A média é de ${md}`)
 }
 function addValue(arr){
     var n = Number(prompt('Digite um valor: '))
@@ -18,5 +20,10 @@ function totalValue(arr){
         total += arr[i]
     }
     return total
+}
+function mdValues(arr, tot){
+    var md = tot
+    md = tot / arr.length
+    return md
 }
 main()
